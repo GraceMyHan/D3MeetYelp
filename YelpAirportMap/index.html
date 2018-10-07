@@ -3,10 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/font.css">
+    <link rel="stylesheet" type="text/css" href="css/leaflet.css">
 </head>
 <body>
 <div id="svg-container">
     <div id="map"></div>
+    <div id="filterbar">
+        <header>
+            <button type="button" id="reset" onclick="initialBoxs()">RESET</button>
+            <h1>Narrow Results</h1>
+        </header>
+    </div>
+    <div id="detailbar">
+        <header>
+            <h2 id="storename" class="business"></h2>
+            <div id="close">&#10005;</div>
+        </header>
+        <div id="d-t-l">
+            <h2>· Overall Star Rating ·</h2>
+            <svg id="donut"></svg>
+        </div>
+        <div id="d-t-r">
+            <h2 class="starword">· Keywords ·</h2>
+            <svg id="word"></svg>
+        </div>
+        <div id="d-b">
+            <h2 style="padding-bottom: 0; width: 150px; ">· Rating Trends ·</h2>
+            <svg id="stack"></svg>
+        </div>
+    </div>
 </div>
 <!-- LIBRARIES -->
 <script type="text/javascript" src="js/d3.min.js"></script>
